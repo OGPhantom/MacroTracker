@@ -18,9 +18,11 @@ Track your daily macros (proteins, fats, carbs), get smart AI-powered recommenda
 
 <p align="center">
   <img width="292" height="566" alt="image" src="https://github.com/user-attachments/assets/997be132-fd31-41d9-af3a-0140ec561123" />
-  <img width="322" height="569" alt="image" src="https://github.com/user-attachments/assets/281baedc-a77a-46b6-bf28-2314b237ed88" />
+  <img width="322" height="569" alt="image" src="https://github.com/user-attachments/assets/281baedc-a77a-46b6-bf28-2314b237ed88" /> 
+</p>
+<p align="center">
   <img width="291" height="193" alt="image" src="https://github.com/user-attachments/assets/ab0b73b0-289d-4dce-961d-470aba83a718" />
-  <img width="274" height="299" alt="image" src="https://github.com/user-attachments/assets/a67a9b38-c57f-481c-af31-2b5626b81957" />     
+  <img width="274" height="299" alt="image" src="https://github.com/user-attachments/assets/a67a9b38-c57f-481c-af31-2b5626b81957" />   
 </p>
 
 ---
