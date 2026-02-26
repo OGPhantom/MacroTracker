@@ -1,0 +1,617 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 70;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		322E86292AE82E1700B388D8 /* WatchMacroTracker Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 322E861C2AE82E1500B388D8 /* WatchMacroTracker Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		322E863B2AE879D300B388D8 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 322E86392AE8367E00B388D8 /* WatchConnectivity.framework */; };
+		322E86A82AEDA78F00B388D8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 322E86A72AEDA78E00B388D8 /* GoogleService-Info.plist */; };
+		322E86AB2AEDA7EA00B388D8 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 322E86AA2AEDA7EA00B388D8 /* FirebaseAuth */; };
+		322E86AD2AEDA8A800B388D8 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322E86AC2AEDA8A800B388D8 /* AuthService.swift */; };
+		322E86B22AEDAB2500B388D8 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322E86B12AEDAB2500B388D8 /* SignInView.swift */; };
+		322E86B42AEDAD5C00B388D8 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322E86B32AEDAD5C00B388D8 /* RegisterView.swift */; };
+		32E215122AB5D81A00E248D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32E215112AB5D81A00E248D4 /* Assets.xcassets */; };
+		B90E7C962F5067D300A3A255 /* WatchMacroTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90E7C932F5067D300A3A255 /* WatchMacroTrackerApp.swift */; };
+		B90E7C982F5067D300A3A255 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90E7C922F5067D300A3A255 /* ContentView.swift */; };
+		B90E7C992F5067D300A3A255 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B90E7C912F5067D300A3A255 /* Assets.xcassets */; };
+		B90E7C9E2F50D4B700A3A255 /* WatchSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90E7C9D2F50D4B700A3A255 /* WatchSessionManager.swift */; };
+		B9ED9C042F50E04C004EFD93 /* Secrets.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = B9ED9C032F50E04C004EFD93 /* Secrets.xcconfig */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		322E86272AE82E1700B388D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 32E215002AB5D81900E248D4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 322E861B2AE82E1500B388D8;
+			remoteInfo = "WatchMacroTracker Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		322E862A2AE82E1700B388D8 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				322E86292AE82E1700B388D8 /* WatchMacroTracker Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		322E861C2AE82E1500B388D8 /* WatchMacroTracker Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WatchMacroTracker Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		322E86392AE8367E00B388D8 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
+		322E86A72AEDA78E00B388D8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		322E86AC2AEDA8A800B388D8 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		322E86B12AEDAB2500B388D8 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		322E86B32AEDAD5C00B388D8 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		32E215082AB5D81900E248D4 /* MacroTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacroTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		32E215112AB5D81A00E248D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B90E7C912F5067D300A3A255 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B90E7C922F5067D300A3A255 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B90E7C932F5067D300A3A255 /* WatchMacroTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchMacroTrackerApp.swift; sourceTree = "<group>"; };
+		B90E7C9C2F50D47F00A3A255 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B90E7C9D2F50D4B700A3A255 /* WatchSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchSessionManager.swift; sourceTree = "<group>"; };
+		B97F165B2F50E56900D20899 /* WatchMacroTracker-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WatchMacroTracker-Watch-App-Info.plist"; sourceTree = "<group>"; };
+		B9ED9C032F50E04C004EFD93 /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		B99248962F50EDA000FE45EA /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Models/DailyMacro.swift,
+				Models/Macro.swift,
+				Models/ResponseModels.swift,
+				Services/OpenAIService.swift,
+			);
+			target = 322E861B2AE82E1500B388D8 /* WatchMacroTracker Watch App */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		B99248892F50ED2200FE45EA /* App */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = App; sourceTree = "<group>"; };
+		B992488A2F50ED3000FE45EA /* Root */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Root; sourceTree = "<group>"; };
+		B992488B2F50ED4800FE45EA /* Extensions */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Extensions; sourceTree = "<group>"; };
+		B992488F2F50ED9B00FE45EA /* Core */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (B99248962F50EDA000FE45EA /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Core; sourceTree = "<group>"; };
+		B99248A12F50EDC900FE45EA /* Views */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Views; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		322E86192AE82E1500B388D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32E215052AB5D81900E248D4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				322E863B2AE879D300B388D8 /* WatchConnectivity.framework in Frameworks */,
+				322E86AB2AEDA7EA00B388D8 /* FirebaseAuth in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		322E86382AE8367E00B388D8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				322E86392AE8367E00B388D8 /* WatchConnectivity.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		322E86B02AEDAB1B00B388D8 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				322E86AC2AEDA8A800B388D8 /* AuthService.swift */,
+				322E86B12AEDAB2500B388D8 /* SignInView.swift */,
+				322E86B32AEDAD5C00B388D8 /* RegisterView.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		32E214FF2AB5D81900E248D4 = {
+			isa = PBXGroup;
+			children = (
+				32E2150A2AB5D81900E248D4 /* MacroTracker */,
+				32E215092AB5D81900E248D4 /* Products */,
+				322E86382AE8367E00B388D8 /* Frameworks */,
+				B90E7C952F5067D300A3A255 /* WatchMacroTracker */,
+			);
+			sourceTree = "<group>";
+		};
+		32E215092AB5D81900E248D4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				32E215082AB5D81900E248D4 /* MacroTracker.app */,
+				322E861C2AE82E1500B388D8 /* WatchMacroTracker Watch App.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		32E2150A2AB5D81900E248D4 /* MacroTracker */ = {
+			isa = PBXGroup;
+			children = (
+				B99248A12F50EDC900FE45EA /* Views */,
+				B992488F2F50ED9B00FE45EA /* Core */,
+				B992488B2F50ED4800FE45EA /* Extensions */,
+				B992488A2F50ED3000FE45EA /* Root */,
+				B99248892F50ED2200FE45EA /* App */,
+				322E86B02AEDAB1B00B388D8 /* Auth */,
+				322E86A72AEDA78E00B388D8 /* GoogleService-Info.plist */,
+				32E215112AB5D81A00E248D4 /* Assets.xcassets */,
+				B9ED9C032F50E04C004EFD93 /* Secrets.xcconfig */,
+				B90E7C9C2F50D47F00A3A255 /* Info.plist */,
+			);
+			path = MacroTracker;
+			sourceTree = "<group>";
+		};
+		B90E7C952F5067D300A3A255 /* WatchMacroTracker */ = {
+			isa = PBXGroup;
+			children = (
+				B90E7C9D2F50D4B700A3A255 /* WatchSessionManager.swift */,
+				B90E7C912F5067D300A3A255 /* Assets.xcassets */,
+				B90E7C922F5067D300A3A255 /* ContentView.swift */,
+				B90E7C932F5067D300A3A255 /* WatchMacroTrackerApp.swift */,
+				B97F165B2F50E56900D20899 /* WatchMacroTracker-Watch-App-Info.plist */,
+			);
+			path = WatchMacroTracker;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		322E861B2AE82E1500B388D8 /* WatchMacroTracker Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 322E862D2AE82E1700B388D8 /* Build configuration list for PBXNativeTarget "WatchMacroTracker Watch App" */;
+			buildPhases = (
+				322E86182AE82E1500B388D8 /* Sources */,
+				322E86192AE82E1500B388D8 /* Frameworks */,
+				322E861A2AE82E1500B388D8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "WatchMacroTracker Watch App";
+			productName = "WatchMacroTracker Watch App";
+			productReference = 322E861C2AE82E1500B388D8 /* WatchMacroTracker Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		32E215072AB5D81900E248D4 /* MacroTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 32E215182AB5D81A00E248D4 /* Build configuration list for PBXNativeTarget "MacroTracker" */;
+			buildPhases = (
+				32E215042AB5D81900E248D4 /* Sources */,
+				32E215052AB5D81900E248D4 /* Frameworks */,
+				32E215062AB5D81900E248D4 /* Resources */,
+				322E862A2AE82E1700B388D8 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				322E86282AE82E1700B388D8 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				B99248892F50ED2200FE45EA /* App */,
+				B992488A2F50ED3000FE45EA /* Root */,
+				B992488B2F50ED4800FE45EA /* Extensions */,
+				B992488F2F50ED9B00FE45EA /* Core */,
+				B99248A12F50EDC900FE45EA /* Views */,
+			);
+			name = MacroTracker;
+			packageProductDependencies = (
+				322E86AA2AEDA7EA00B388D8 /* FirebaseAuth */,
+			);
+			productName = MacroTracker;
+			productReference = 32E215082AB5D81900E248D4 /* MacroTracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		32E215002AB5D81900E248D4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 2620;
+				TargetAttributes = {
+					322E861B2AE82E1500B388D8 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					32E215072AB5D81900E248D4 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = 32E215032AB5D81900E248D4 /* Build configuration list for PBXProject "MacroTracker" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 32E214FF2AB5D81900E248D4;
+			packageReferences = (
+				322E86A92AEDA7EA00B388D8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			productRefGroup = 32E215092AB5D81900E248D4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				32E215072AB5D81900E248D4 /* MacroTracker */,
+				322E861B2AE82E1500B388D8 /* WatchMacroTracker Watch App */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		322E861A2AE82E1500B388D8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B90E7C992F5067D300A3A255 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32E215062AB5D81900E248D4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				322E86A82AEDA78F00B388D8 /* GoogleService-Info.plist in Resources */,
+				32E215122AB5D81A00E248D4 /* Assets.xcassets in Resources */,
+				B9ED9C042F50E04C004EFD93 /* Secrets.xcconfig in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		322E86182AE82E1500B388D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B90E7C962F5067D300A3A255 /* WatchMacroTrackerApp.swift in Sources */,
+				B90E7C9E2F50D4B700A3A255 /* WatchSessionManager.swift in Sources */,
+				B90E7C982F5067D300A3A255 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32E215042AB5D81900E248D4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				322E86B42AEDAD5C00B388D8 /* RegisterView.swift in Sources */,
+				322E86B22AEDAB2500B388D8 /* SignInView.swift in Sources */,
+				322E86AD2AEDA8A800B388D8 /* AuthService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		322E86282AE82E1700B388D8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 322E861B2AE82E1500B388D8 /* WatchMacroTracker Watch App */;
+			targetProxy = 322E86272AE82E1700B388D8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		322E862B2AE82E1700B388D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9ED9C032F50E04C004EFD93 /* Secrets.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 39KX3J57QQ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "WatchMacroTracker/WatchMacroTracker-Watch-App-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = WatchMacroTracker;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.ogphantom.MacroTracker;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ogphantom.MacroTracker.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		322E862C2AE82E1700B388D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9ED9C032F50E04C004EFD93 /* Secrets.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 39KX3J57QQ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "WatchMacroTracker/WatchMacroTracker-Watch-App-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = WatchMacroTracker;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.ogphantom.MacroTracker;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ogphantom.MacroTracker.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
+		32E215162AB5D81A00E248D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9ED9C032F50E04C004EFD93 /* Secrets.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 8U63ZP8KK6;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		32E215172AB5D81A00E248D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9ED9C032F50E04C004EFD93 /* Secrets.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 8U63ZP8KK6;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		32E215192AB5D81A00E248D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9ED9C032F50E04C004EFD93 /* Secrets.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 39KX3J57QQ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MacroTracker/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ogphantom.MacroTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		32E2151A2AB5D81A00E248D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9ED9C032F50E04C004EFD93 /* Secrets.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 39KX3J57QQ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MacroTracker/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ogphantom.MacroTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		322E862D2AE82E1700B388D8 /* Build configuration list for PBXNativeTarget "WatchMacroTracker Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				322E862B2AE82E1700B388D8 /* Debug */,
+				322E862C2AE82E1700B388D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		32E215032AB5D81900E248D4 /* Build configuration list for PBXProject "MacroTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				32E215162AB5D81A00E248D4 /* Debug */,
+				32E215172AB5D81A00E248D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		32E215182AB5D81A00E248D4 /* Build configuration list for PBXNativeTarget "MacroTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				32E215192AB5D81A00E248D4 /* Debug */,
+				32E2151A2AB5D81A00E248D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		322E86A92AEDA7EA00B388D8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.16.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		322E86AA2AEDA7EA00B388D8 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 322E86A92AEDA7EA00B388D8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 32E215002AB5D81900E248D4 /* Project object */;
+}
