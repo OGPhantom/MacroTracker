@@ -2,16 +2,22 @@
 An **AI-powered macronutrient tracker for iOS and watchOS** built with **SwiftUI**, **SwiftData**, **Firebase**, **WatchConnectivity** and **OpenAI API**. 
 Track your **daily macros** by simply entering a food name, let **AI** calculate the rest, and sync seamlessly with **Apple Watch**. 
 
---- ### 📌 Short Description 
+--- 
+
+### 📌 Short Description 
 
 MacroTracker is a SwiftUI iOS/watchOS app that tracks macronutrients. 
 Users can authenticate via Firebase, add food items, automatically estimate protein/fats/carbs by OpenAI API, store data locally with SwiftData and sync entries from Apple Watch. 
 
---- ## 📹 Demo 
+--- 
+
+## 📹 Demo 
 
 video here 
 
---- ## 📸 Screenshots 
+--- 
+
+## 📸 Screenshots 
 
 <p align="center"> 
   <img width="292" height="566" alt="image" src="https://github.com/user-attachments/assets/997be132-fd31-41d9-af3a-0140ec561123" /> 
@@ -23,7 +29,9 @@ video here
   <img width="274" height="299" alt="image" src="https://github.com/user-attachments/assets/a67a9b38-c57f-481c-af31-2b5626b81957" /> 
 </p> 
 
---- ## ✨ Features 
+--- 
+
+## ✨ Features 
 
 - 🔐 Authentication with Firebase
 - 🍽 Add food by name — AI calculates macros automatically
@@ -34,7 +42,9 @@ video here
 - ⌚ Apple Watch companion app
 - 🔄 Real-time sync between Watch and iPhone
 
---- ## 🛠️ Tech Stack 
+--- 
+
+## 🛠️ Tech Stack 
 
 iOS & watchOS 
 - **SwiftUI**
@@ -46,7 +56,9 @@ Services
 - **Firebase**
 - **OpenAI API**
 
---- ## 📄 Requirements
+--- 
+
+## 📄 Requirements
 
 - Xcode 15+
 - iOS 17+
@@ -54,7 +66,9 @@ Services
 - Firebase project with Email/Password enabled
 - OpenAI API key 
 
---- ## 🚀 Installation 
+--- 
+
+## 🚀 Installation 
 
 1. Clone the repository.
 2. Open MacroTracker.xcodeproj in Xcode.
