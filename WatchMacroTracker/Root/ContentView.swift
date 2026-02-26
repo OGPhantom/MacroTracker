@@ -39,6 +39,7 @@ struct ContentView: View {
             do {
                 let result = try await OpenAIService.shared.sendPrompt(message: food)
                 sendMacroToiOS(result)
+                food = ""
             } catch {
                 isLoading = false
                 print(error.localizedDescription)
