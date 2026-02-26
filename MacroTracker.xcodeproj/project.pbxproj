@@ -15,8 +15,6 @@
 		322E86B22AEDAB2500B388D8 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322E86B12AEDAB2500B388D8 /* SignInView.swift */; };
 		322E86B42AEDAD5C00B388D8 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322E86B32AEDAD5C00B388D8 /* RegisterView.swift */; };
 		32E215122AB5D81A00E248D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32E215112AB5D81A00E248D4 /* Assets.xcassets */; };
-		B90E7C962F5067D300A3A255 /* WatchMacroTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90E7C932F5067D300A3A255 /* WatchMacroTrackerApp.swift */; };
-		B90E7C982F5067D300A3A255 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90E7C922F5067D300A3A255 /* ContentView.swift */; };
 		B90E7C992F5067D300A3A255 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B90E7C912F5067D300A3A255 /* Assets.xcassets */; };
 		B90E7C9E2F50D4B700A3A255 /* WatchSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90E7C9D2F50D4B700A3A255 /* WatchSessionManager.swift */; };
 		B9ED9C042F50E04C004EFD93 /* Secrets.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = B9ED9C032F50E04C004EFD93 /* Secrets.xcconfig */; };
@@ -56,8 +54,6 @@
 		32E215082AB5D81900E248D4 /* MacroTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacroTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32E215112AB5D81A00E248D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B90E7C912F5067D300A3A255 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B90E7C922F5067D300A3A255 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		B90E7C932F5067D300A3A255 /* WatchMacroTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchMacroTrackerApp.swift; sourceTree = "<group>"; };
 		B90E7C9C2F50D47F00A3A255 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B90E7C9D2F50D4B700A3A255 /* WatchSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchSessionManager.swift; sourceTree = "<group>"; };
 		B97F165B2F50E56900D20899 /* WatchMacroTracker-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WatchMacroTracker-Watch-App-Info.plist"; sourceTree = "<group>"; };
@@ -83,6 +79,8 @@
 		B992488B2F50ED4800FE45EA /* Extensions */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Extensions; sourceTree = "<group>"; };
 		B992488F2F50ED9B00FE45EA /* Core */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (B99248962F50EDA000FE45EA /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Core; sourceTree = "<group>"; };
 		B99248A12F50EDC900FE45EA /* Views */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Views; sourceTree = "<group>"; };
+		B99248A22F50F97100FE45EA /* Root */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Root; sourceTree = "<group>"; };
+		B99248A32F50F97A00FE45EA /* App */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = App; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,13 +160,21 @@
 		B90E7C952F5067D300A3A255 /* WatchMacroTracker */ = {
 			isa = PBXGroup;
 			children = (
-				B90E7C9D2F50D4B700A3A255 /* WatchSessionManager.swift */,
+				B99248A42F50F98800FE45EA /* Service */,
+				B99248A32F50F97A00FE45EA /* App */,
+				B99248A22F50F97100FE45EA /* Root */,
 				B90E7C912F5067D300A3A255 /* Assets.xcassets */,
-				B90E7C922F5067D300A3A255 /* ContentView.swift */,
-				B90E7C932F5067D300A3A255 /* WatchMacroTrackerApp.swift */,
 				B97F165B2F50E56900D20899 /* WatchMacroTracker-Watch-App-Info.plist */,
 			);
 			path = WatchMacroTracker;
+			sourceTree = "<group>";
+		};
+		B99248A42F50F98800FE45EA /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				B90E7C9D2F50D4B700A3A255 /* WatchSessionManager.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,6 +191,10 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				B99248A22F50F97100FE45EA /* Root */,
+				B99248A32F50F97A00FE45EA /* App */,
 			);
 			name = "WatchMacroTracker Watch App";
 			productName = "WatchMacroTracker Watch App";
@@ -286,9 +296,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B90E7C962F5067D300A3A255 /* WatchMacroTrackerApp.swift in Sources */,
 				B90E7C9E2F50D4B700A3A255 /* WatchSessionManager.swift in Sources */,
-				B90E7C982F5067D300A3A255 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
