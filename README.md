@@ -13,8 +13,11 @@ Users can authenticate via Firebase, add food items, automatically estimate prot
 
 ## 📹 Demo 
 
-[Watch iOS Demo](https://github.com/user-attachments/assets/9034cf11-ce3f-48fe-80e7-af29bbdf57f1)
-[Watch watchOS Demo](https://github.com/user-attachments/assets/4ea65083-fc76-4a57-90b4-1949d8d5a898)
+<p align="center"> 
+  [Watch iOS Demo](https://github.com/user-attachments/assets/9034cf11-ce3f-48fe-80e7-af29bbdf57f1)
+
+  [Watch watchOS Demo](https://github.com/user-attachments/assets/4ea65083-fc76-4a57-90b4-1949d8d5a898)
+</p> 
 
 --- 
 
