@@ -13,20 +13,29 @@ Users can authenticate via Firebase, add food items, automatically estimate prot
 
 ## 📹 Demo 
 
-video here 
+https://github.com/user-attachments/assets/a3272a94-be04-4856-8c3b-7d3f8a484d03 
 
 --- 
 
 ## 📸 Screenshots 
 
+### 🔐 Authentication
 <p align="center"> 
-  <img width="292" height="566" alt="image" src="https://github.com/user-attachments/assets/997be132-fd31-41d9-af3a-0140ec561123" /> 
-  <img width="322" height="569" alt="image" src="https://github.com/user-attachments/assets/281baedc-a77a-46b6-bf28-2314b237ed88" /> 
+  <img width="484" height="937" alt="Screenshot 2026-02-27 at 20 43 26" src="https://github.com/user-attachments/assets/3ba03d44-ebe1-4788-90d2-8a2832b97f1b" />
+  <img width="484" height="937" alt="Screenshot 2026-02-27 at 20 43 52" src="https://github.com/user-attachments/assets/d65123d6-6f67-41a0-ab69-48361d249412" />
 </p> 
 
+### 🥗 Track & Log Your Meals
 <p align="center"> 
-  <img width="291" height="193" alt="image" src="https://github.com/user-attachments/assets/ab0b73b0-289d-4dce-961d-470aba83a718" /> 
-  <img width="274" height="299" alt="image" src="https://github.com/user-attachments/assets/a67a9b38-c57f-481c-af31-2b5626b81957" /> 
+  <img width="484" height="937" alt="Screenshot 2026-02-27 at 20 47 47" src="https://github.com/user-attachments/assets/e67f998c-3881-41ce-8762-f656acf72282" />
+  <img width="484" height="937" alt="Screenshot 2026-02-27 at 20 54 44" src="https://github.com/user-attachments/assets/e0c09fd2-9150-4275-8f2a-82ce02471eba" />
+</p>
+
+
+### ⌚ Apple Watch Companion
+<p align="center"> 
+  <img width="420" height="511" alt="Screenshot 2026-02-27 at 20 57 05" src="https://github.com/user-attachments/assets/9f33df5f-6d77-49b8-95e9-beee469252e7" />
+  <img width="420" height="511" alt="Screenshot 2026-02-27 at 20 59 00" src="https://github.com/user-attachments/assets/3f96ac8a-12e8-4bd4-a3fa-dfce54f7330f" />
 </p> 
 
 --- 
