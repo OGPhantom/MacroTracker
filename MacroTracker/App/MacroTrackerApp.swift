@@ -17,8 +17,12 @@ struct MacroTrackerApp: App {
     // Bridge UIKit AppDelegate into SwiftUI app
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
 
+    let sharedModelContainer: ModelContainer = {
+            try! ModelContainer(for: Macro.self)
+        }()
+
     init() {
-        _ = iOSConnector.shared
+        iOSConnector.shared.modelContainer = sharedModelContainer
     }
 
     // MARK: - SwiftData Container
@@ -26,6 +30,6 @@ struct MacroTrackerApp: App {
         WindowGroup {
             ContentView()
         }
-        .modelContainer(for: Macro.self)
+        .modelContainer(sharedModelContainer)
     }
 }

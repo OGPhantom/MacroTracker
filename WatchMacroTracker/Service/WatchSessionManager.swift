@@ -28,11 +28,18 @@ final class WatchSessionManager: NSObject, ObservableObject, WCSessionDelegate {
     func send(_ data: [String: Any]) {
         let session = WCSession.default
 
-        if session.isReachable {
-            session.sendMessage(data, replyHandler: nil, errorHandler: nil)
-        }
+        print("WATCH: trying to send")
+        print("WATCH: reachable =", session.isReachable)
 
-        let transfer = session.transferUserInfo(data)
+        if session.isReachable {
+            print("WATCH: sending via sendMessage")
+            session.sendMessage(data, replyHandler: nil) { error in
+                print("WATCH: sendMessage error:", error.localizedDescription)
+            }
+        } else {
+            print("WATCH: sending via transferUserInfo")
+            session.transferUserInfo(data)
+        }
     }
 
     // MARK: - Session Activation Callback

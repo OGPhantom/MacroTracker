@@ -59,6 +59,8 @@ final class iOSConnector: NSObject, ObservableObject, WCSessionDelegate {
 
     func session(_ session: WCSession,
                  didReceiveMessage message: [String : Any]) {
+        print("iOS: didReceiveMessage called")
+        print("iOS: message =", message)
         saveMacro(from: message)
     }
 
