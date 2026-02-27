@@ -2,21 +2,24 @@ import Foundation
 
 extension Date {
     var monthAndDay: String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "MMM\ndd"
-        return formatter.string(from: self)
+        DateFormatter.monthAndDay.string(from: self)
     }
 
-    
-    var time: String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "h:mm a"
-        return formatter.string(from: self)
-    }
-    
     var year: String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "YYYY"
-        return formatter.string(from: self)
+        DateFormatter.year.string(from: self)
     }
+}
+
+private extension DateFormatter {
+    static let monthAndDay: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMM\ndd"
+        return formatter
+    }()
+
+    static let year: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy"
+        return formatter
+    }()
 }

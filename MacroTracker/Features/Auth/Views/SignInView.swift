@@ -1,58 +1,43 @@
 import SwiftUI
 
 struct SignInView: View {
+
     @State private var email = ""
     @State private var password = ""
     @State private var showRegister = false
     @State private var showErrorAlert = false
     @State private var errorMessage = ""
-    
+
     var body: some View {
-        VStack {
+        VStack(spacing: 20) {
+
             Image("main")
                 .resizable()
                 .scaledToFit()
-            Spacer().frame(height: 20)
-            
-            Spacer().frame(height: 20)
-            TextField("Email Address", text: $email)
-                .padding()
-                .autocorrectionDisabled()
-                .textInputAutocapitalization(.never)
-                .frame(maxWidth: .infinity)
-                .background {
-                    RoundedRectangle(cornerRadius: 20)
-                        .fill(.ultraThinMaterial)
-                }
-            Spacer().frame(height: 20)
-            
-            SecureField("Password", text: $password)
-                .padding()
-                .frame(maxWidth: .infinity)
-                .background {
-                    RoundedRectangle(cornerRadius: 20)
-                        .fill(.ultraThinMaterial)
-                }
-            Spacer().frame(height: 20)
-            
-            Spacer().frame(height: 20) 
-            Button("Log In") {
+
+            FormTextField(
+                title: "Email Address",
+                text: $email,
+                keyboardType: .emailAddress,
+                contentType: .emailAddress
+            )
+
+            FormTextField(
+                title: "Password",
+                text: $password,
+                contentType: .password,
+                isSecure: true
+            )
+
+            PrimaryButton(title: "Log In") {
                 signIn()
             }
-            .bold()
-            .frame(height: 55)
-            .frame(maxWidth: .infinity)
-            .foregroundStyle(Color(uiColor: .systemBackground))
-            .background {
-                RoundedRectangle(cornerRadius: 20)
-                    .fill(Color(uiColor: .label))
-            }
-            
-            Button("New User? Sign In") {
+            .disabled(!isFormValid)
+
+            Button("New User? Register") {
                 showRegister = true
             }
-            .padding()
-            .foregroundStyle(Color(uiColor: .label))
+            .foregroundStyle(.primary)
         }
         .padding()
         .frame(maxHeight: .infinity, alignment: .top)
@@ -60,20 +45,31 @@ struct SignInView: View {
             RegisterView()
                 .presentationDetents([.fraction(0.5)])
         }
-        .alert(isPresented: $showErrorAlert) {
-                    Alert(title: Text("Error"), message: Text(errorMessage), dismissButton: .default(Text("OK")))
-                }
+        .alert("Error", isPresented: $showErrorAlert) {
+            Button("OK", role: .cancel) { }
+        } message: {
+            Text(errorMessage)
+        }
     }
-    
+}
+
+
+private extension SignInView {
+    private var isFormValid: Bool {
+        !email.isEmpty && !password.isEmpty
+    }
+
     private func signIn() {
-            Task {
-                do {
-                    try await AuthService.shared.signInWithEmail(email: email, password: password)
-                } catch {
+        Task {
+            do {
+                try await AuthService.shared.signInWithEmail(email: email, password: password)
+            } catch {
+                await MainActor.run {
                     errorMessage = "Invalid email or password"
                     showErrorAlert = true
                 }
             }
+        }
     }
 }
 

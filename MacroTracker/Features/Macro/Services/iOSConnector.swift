@@ -4,21 +4,32 @@
 //
 //  Created by Никита Сторчай on 26.02.2026.
 //
-
-
 import Foundation
 import WatchConnectivity
 import SwiftData
 
+// MARK: - Watch to iOS Bridge
+
+// Handles communication from Apple Watch
+// and saves received macros into SwiftData
 final class iOSConnector: NSObject, ObservableObject, WCSessionDelegate {
 
+    // MARK: - Shared Instance
+
     static let shared = iOSConnector()
+
+    // MARK: - SwiftData Container
+
+    // Injected from App to allow saving data
     var modelContainer: ModelContainer? {
         didSet {
             flushPendingPayloadsIfPossible()
         }
     }
+
     private var pendingPayloads: [[String: Any]] = []
+
+    // MARK: - Initialization
 
     private override init() {
         super.init()
@@ -27,35 +38,36 @@ final class iOSConnector: NSObject, ObservableObject, WCSessionDelegate {
             let session = WCSession.default
             session.delegate = self
             session.activate()
-            print("iOS WCSession activated")
         }
     }
+
+    // MARK: - Session Activation
 
     func session(_ session: WCSession,
                  activationDidCompleteWith activationState: WCSessionActivationState,
                  error: Error?) {
-        print("iOS activation state:", activationState.rawValue)
-        if let error {
-            print("iOS activation error:", error.localizedDescription)
-        }
-        print("iOS watch paired:", session.isPaired, "watch app installed:", session.isWatchAppInstalled)
     }
+
+    // MARK: - Receive Background Data
 
     func session(_ session: WCSession,
                  didReceiveUserInfo userInfo: [String : Any]) {
-        print("Received from Watch:", userInfo)
         saveMacro(from: userInfo)
     }
 
+    // MARK: - Receive Live Message
+
     func session(_ session: WCSession,
                  didReceiveMessage message: [String : Any]) {
-        print("Received message from Watch:", message)
         saveMacro(from: message)
     }
 
     func sessionDidBecomeInactive(_ session: WCSession) {}
     func sessionDidDeactivate(_ session: WCSession) {}
 
+    // MARK: - Save Macro
+
+    // Converts payload into Macro model and saves to SwiftData
     private func saveMacro(from payload: [String: Any]) {
         let food = payload["food"] as? String ?? "Not Found"
         let carbs = payload["carbs"] as? Int ?? 0
@@ -67,7 +79,6 @@ final class iOSConnector: NSObject, ObservableObject, WCSessionDelegate {
 
         guard let modelContainer else {
             pendingPayloads.append(payload)
-            print("iOSConnector: modelContainer is nil, queued payload. Pending:", pendingPayloads.count)
             return
         }
 
@@ -85,19 +96,20 @@ final class iOSConnector: NSObject, ObservableObject, WCSessionDelegate {
 
             do {
                 try modelContainer.mainContext.save()
-                print("iOSConnector: macro saved to SwiftData")
             } catch {
-                print("iOSConnector: failed to save macro:", error.localizedDescription)
+                print(error)
             }
         }
     }
 
+    // MARK: - Watch State Changes
+
     func sessionWatchStateDidChange(_ session: WCSession) {
-        print("iOS watch state changed. paired:", session.isPaired,
-              "watchAppInstalled:", session.isWatchAppInstalled,
-              "reachable:", session.isReachable)
     }
 
+    // MARK: - Date Parsing
+
+    // Extracts Date from payload in multiple formats
     private func dateValue(forKey key: String, in payload: [String: Any]) -> Date? {
         if let date = payload[key] as? Date {
             return date
@@ -118,11 +130,16 @@ final class iOSConnector: NSObject, ObservableObject, WCSessionDelegate {
         return nil
     }
 
+    // MARK: - Flush Pending Data
+
+    // Saves queued payloads once modelContainer becomes available
     private func flushPendingPayloadsIfPossible() {
-        guard modelContainer != nil, pendingPayloads.isEmpty == false else { return }
+        guard modelContainer != nil,
+              pendingPayloads.isEmpty == false else { return }
+
         let payloads = pendingPayloads
         pendingPayloads.removeAll()
-        print("iOSConnector: flushing pending payloads:", payloads.count)
+
         for payload in payloads {
             saveMacro(from: payload)
         }

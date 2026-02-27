@@ -4,8 +4,6 @@
 //
 //  Created by Никита Сторчай on 26.02.2026.
 //
-
-
 import WatchConnectivity
 
 final class WatchSessionManager: NSObject, ObservableObject, WCSessionDelegate {

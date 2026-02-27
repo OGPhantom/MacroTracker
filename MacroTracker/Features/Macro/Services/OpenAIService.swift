@@ -1,13 +1,23 @@
 import Foundation
 
+// MARK: - OpenAI Errors
+
 enum OpenAIError: Error {
     case invalidResponse
 }
 
+// MARK: - OpenAI Service
+
+// Handles network communication with OpenAI API
 final class OpenAIService {
+
+    // MARK: - Shared Instance
 
     static let shared = OpenAIService()
 
+    // MARK: - API Key
+
+    // Reads OpenAI key from Info.plist
     static var apiKey: String {
         guard let key = Bundle.main.object(forInfoDictionaryKey: "OPENAI_API_KEY") as? String else {
             fatalError("OPENAI_API_KEY not found")
@@ -15,6 +25,9 @@ final class OpenAIService {
         return key
     }
 
+    // MARK: - Request Builder
+
+    // Builds URLRequest with JSON schema for macro response
     private func generateURLRequest(message: String) throws -> URLRequest {
         guard let url = URL(string: "https://api.openai.com/v1/responses") else {
             throw URLError(.badURL)
@@ -24,7 +37,7 @@ final class OpenAIService {
         request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue("Bearer \(OpenAIService.apiKey)", forHTTPHeaderField: "Authorization")
-        
+
         let schema: [String: Any] = [
             "type": "object",
             "properties": [
@@ -68,13 +81,15 @@ final class OpenAIService {
         return request
     }
 
+    // MARK: - Send Prompt
+
+    // Sends request to OpenAI and parses MacroResult
     func sendPrompt(message: String) async throws -> MacroResult {
         let request = try generateURLRequest(message: message)
         let (data, response) = try await URLSession.shared.data(for: request)
 
         guard let http = response as? HTTPURLResponse,
               http.statusCode == 200 else {
-            print(String(data: data, encoding: .utf8) ?? "")
             throw OpenAIError.invalidResponse
         }
 
