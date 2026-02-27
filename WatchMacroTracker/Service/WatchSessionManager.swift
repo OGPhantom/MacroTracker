@@ -9,9 +9,11 @@
 import WatchConnectivity
 
 final class WatchSessionManager: NSObject, ObservableObject, WCSessionDelegate {
-
+    // MARK: - Shared Instance & Initialization
+    // Single shared manager used across the app
     static let shared = WatchSessionManager()
 
+    // Sets up and activates WatchConnectivity session
     private override init() {
         super.init()
 
@@ -20,48 +22,37 @@ final class WatchSessionManager: NSObject, ObservableObject, WCSessionDelegate {
         let session = WCSession.default
         session.delegate = self
         session.activate()
-
-        print("WATCH activated:", session.activationState.rawValue)
-        print("WATCH companion installed:", session.isCompanionAppInstalled, "reachable:", session.isReachable)
     }
 
+    // MARK: - Send Data to iPhone
+    // Sends data immediately if reachable,
+    // otherwise queues it for background delivery
     func send(_ data: [String: Any]) {
         let session = WCSession.default
 
         if session.isReachable {
-            session.sendMessage(data, replyHandler: nil) { error in
-                print("WATCH sendMessage failed:", error.localizedDescription)
-            }
-        } else {
-            print("WATCH sendMessage skipped: iPhone not reachable")
+            session.sendMessage(data, replyHandler: nil, errorHandler: nil)
         }
 
         let transfer = session.transferUserInfo(data)
-        print("Queued userInfo transfer:", transfer, data)
     }
 
+    // MARK: - Session Activation Callback
+    // Called when the WatchConnectivity session finishes activating
     func session(_ session: WCSession,
                  activationDidCompleteWith activationState: WCSessionActivationState,
                  error: Error?) {
-        print("WATCH activation:", activationState.rawValue)
-        if let error {
-            print("WATCH activation error:", error.localizedDescription)
-        }
-        print("WATCH companion installed:", session.isCompanionAppInstalled, "reachable:", session.isReachable)
     }
 
+    // MARK: - Background Transfer Completion
+    // Called when a queued transferUserInfo delivery completes
     func session(_ session: WCSession,
                  didFinish userInfoTransfer: WCSessionUserInfoTransfer,
                  error: Error?) {
-        if let error {
-            print("WATCH transfer failed:", error.localizedDescription)
-            return
-        }
-
-        print("WATCH transfer delivered:", userInfoTransfer.userInfo)
     }
 
+    // MARK: - Reachability Updates
+    // Called when connection status between Watch and iPhone changes
     func sessionReachabilityDidChange(_ session: WCSession) {
-        print("WATCH reachability changed:", session.isReachable)
     }
 }
