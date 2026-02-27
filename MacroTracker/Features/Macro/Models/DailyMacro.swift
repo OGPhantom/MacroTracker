@@ -1,3 +1,10 @@
+//
+//  DailyMacro.swift
+//  MacroTracker
+//
+//  Created by Никита Сторчай on 27.02.2024.
+//
+
 import Foundation
 
 struct DailyMacro: Identifiable {

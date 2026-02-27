@@ -1,9 +1,5 @@
 import Foundation
 
-enum HTTPMethod: String {
-    case post = "POST"
-}
-
 enum OpenAIError: Error {
     case invalidResponse
 }
@@ -94,17 +90,4 @@ final class OpenAIService {
 
         return try JSONDecoder().decode(MacroResult.self, from: jsonData)
     }
-}
-
-struct OpenAIResponse: Decodable {
-    let output: [OutputItem]
-}
-
-struct OutputItem: Decodable {
-    let content: [ContentItem]
-}
-
-struct ContentItem: Decodable {
-    let type: String
-    let text: String?
 }
