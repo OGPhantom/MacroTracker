@@ -11,13 +11,10 @@
 		322E863B2AE879D300B388D8 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 322E86392AE8367E00B388D8 /* WatchConnectivity.framework */; };
 		322E86A82AEDA78F00B388D8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 322E86A72AEDA78E00B388D8 /* GoogleService-Info.plist */; };
 		322E86AB2AEDA7EA00B388D8 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 322E86AA2AEDA7EA00B388D8 /* FirebaseAuth */; };
-		322E86AD2AEDA8A800B388D8 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322E86AC2AEDA8A800B388D8 /* AuthService.swift */; };
-		322E86B22AEDAB2500B388D8 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322E86B12AEDAB2500B388D8 /* SignInView.swift */; };
-		322E86B42AEDAD5C00B388D8 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322E86B32AEDAD5C00B388D8 /* RegisterView.swift */; };
 		32E215122AB5D81A00E248D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32E215112AB5D81A00E248D4 /* Assets.xcassets */; };
 		B90E7C992F5067D300A3A255 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B90E7C912F5067D300A3A255 /* Assets.xcassets */; };
 		B90E7C9E2F50D4B700A3A255 /* WatchSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90E7C9D2F50D4B700A3A255 /* WatchSessionManager.swift */; };
-		B9ED9C042F50E04C004EFD93 /* Secrets.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = B9ED9C032F50E04C004EFD93 /* Secrets.xcconfig */; };
+		B9E369F72F51CD2500BD4092 /* Secrets.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = B9E369F62F51CD2500BD4092 /* Secrets.xcconfig */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,37 +45,34 @@
 		322E861C2AE82E1500B388D8 /* WatchMacroTracker Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WatchMacroTracker Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		322E86392AE8367E00B388D8 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
 		322E86A72AEDA78E00B388D8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		322E86AC2AEDA8A800B388D8 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
-		322E86B12AEDAB2500B388D8 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
-		322E86B32AEDAD5C00B388D8 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		32E215082AB5D81900E248D4 /* MacroTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacroTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32E215112AB5D81A00E248D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B90E7C912F5067D300A3A255 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B90E7C9C2F50D47F00A3A255 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B90E7C9D2F50D4B700A3A255 /* WatchSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchSessionManager.swift; sourceTree = "<group>"; };
 		B97F165B2F50E56900D20899 /* WatchMacroTracker-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WatchMacroTracker-Watch-App-Info.plist"; sourceTree = "<group>"; };
+		B9E369F62F51CD2500BD4092 /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
 		B9ED9C032F50E04C004EFD93 /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		B99248962F50EDA000FE45EA /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+		B9152A592F51CAD5004F84A1 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Models/DailyMacro.swift,
-				Models/Macro.swift,
-				Models/ResponseModels.swift,
-				Services/OpenAIService.swift,
+				Macro/Models/DailyMacro.swift,
+				Macro/Models/Macro.swift,
+				Macro/Models/ResponseModels.swift,
+				Macro/Services/OpenAIService.swift,
 			);
 			target = 322E861B2AE82E1500B388D8 /* WatchMacroTracker Watch App */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		B9152A302F51C9EA004F84A1 /* Shared */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Shared; sourceTree = "<group>"; };
+		B9152A352F51CA46004F84A1 /* Features */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (B9152A592F51CAD5004F84A1 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Features; sourceTree = "<group>"; };
 		B99248892F50ED2200FE45EA /* App */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = App; sourceTree = "<group>"; };
 		B992488A2F50ED3000FE45EA /* Root */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Root; sourceTree = "<group>"; };
-		B992488B2F50ED4800FE45EA /* Extensions */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Extensions; sourceTree = "<group>"; };
-		B992488F2F50ED9B00FE45EA /* Core */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (B99248962F50EDA000FE45EA /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Core; sourceTree = "<group>"; };
-		B99248A12F50EDC900FE45EA /* Views */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Views; sourceTree = "<group>"; };
 		B99248A22F50F97100FE45EA /* Root */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Root; sourceTree = "<group>"; };
 		B99248A32F50F97A00FE45EA /* App */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = App; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -111,16 +105,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		322E86B02AEDAB1B00B388D8 /* Auth */ = {
-			isa = PBXGroup;
-			children = (
-				322E86AC2AEDA8A800B388D8 /* AuthService.swift */,
-				322E86B12AEDAB2500B388D8 /* SignInView.swift */,
-				322E86B32AEDAD5C00B388D8 /* RegisterView.swift */,
-			);
-			path = Auth;
-			sourceTree = "<group>";
-		};
 		32E214FF2AB5D81900E248D4 = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +112,7 @@
 				32E215092AB5D81900E248D4 /* Products */,
 				322E86382AE8367E00B388D8 /* Frameworks */,
 				B90E7C952F5067D300A3A255 /* WatchMacroTracker */,
+				B9E369CF2F51CD2500BD4092 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -143,16 +128,14 @@
 		32E2150A2AB5D81900E248D4 /* MacroTracker */ = {
 			isa = PBXGroup;
 			children = (
-				B99248A12F50EDC900FE45EA /* Views */,
-				B992488F2F50ED9B00FE45EA /* Core */,
-				B992488B2F50ED4800FE45EA /* Extensions */,
+				B9152A352F51CA46004F84A1 /* Features */,
+				B9152A302F51C9EA004F84A1 /* Shared */,
 				B992488A2F50ED3000FE45EA /* Root */,
 				B99248892F50ED2200FE45EA /* App */,
-				322E86B02AEDAB1B00B388D8 /* Auth */,
 				322E86A72AEDA78E00B388D8 /* GoogleService-Info.plist */,
 				32E215112AB5D81A00E248D4 /* Assets.xcassets */,
-				B9ED9C032F50E04C004EFD93 /* Secrets.xcconfig */,
 				B90E7C9C2F50D47F00A3A255 /* Info.plist */,
+				B9E369F62F51CD2500BD4092 /* Secrets.xcconfig */,
 			);
 			path = MacroTracker;
 			sourceTree = "<group>";
@@ -175,6 +158,14 @@
 				B90E7C9D2F50D4B700A3A255 /* WatchSessionManager.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		B9E369CF2F51CD2500BD4092 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				B9ED9C032F50E04C004EFD93 /* Secrets.xcconfig */,
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,11 +207,10 @@
 				322E86282AE82E1700B388D8 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
+				B9152A302F51C9EA004F84A1 /* Shared */,
+				B9152A352F51CA46004F84A1 /* Features */,
 				B99248892F50ED2200FE45EA /* App */,
 				B992488A2F50ED3000FE45EA /* Root */,
-				B992488B2F50ED4800FE45EA /* Extensions */,
-				B992488F2F50ED9B00FE45EA /* Core */,
-				B99248A12F50EDC900FE45EA /* Views */,
 			);
 			name = MacroTracker;
 			packageProductDependencies = (
@@ -285,7 +275,7 @@
 			files = (
 				322E86A82AEDA78F00B388D8 /* GoogleService-Info.plist in Resources */,
 				32E215122AB5D81A00E248D4 /* Assets.xcassets in Resources */,
-				B9ED9C042F50E04C004EFD93 /* Secrets.xcconfig in Resources */,
+				B9E369F72F51CD2500BD4092 /* Secrets.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,9 +294,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				322E86B42AEDAD5C00B388D8 /* RegisterView.swift in Sources */,
-				322E86B22AEDAB2500B388D8 /* SignInView.swift in Sources */,
-				322E86AD2AEDA8A800B388D8 /* AuthService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
