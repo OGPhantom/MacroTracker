@@ -21,16 +21,20 @@ Users can authenticate via Firebase, add food items, automatically estimate prot
 
 ## 📸 Screenshots 
 
-### 🔐 Authentication
+### 🔐 Authentication (Light & Dark Mode)
 <p align="center"> 
   <img width="484" height="937" alt="Screenshot 2026-02-27 at 20 43 26" src="https://github.com/user-attachments/assets/3ba03d44-ebe1-4788-90d2-8a2832b97f1b" />
-  <img width="484" height="937" alt="Screenshot 2026-02-27 at 20 43 52" src="https://github.com/user-attachments/assets/d65123d6-6f67-41a0-ab69-48361d249412" />
+  <img width="484" height="937" alt="Screenshot 2026-02-28 at 14 03 24" src="https://github.com/user-attachments/assets/9946cccb-d770-4d25-b078-3ba7610d2e88" />
+  <img width="484" height="937" alt="Screenshot 2026-02-28 at 14 02 30" src="https://github.com/user-attachments/assets/69bceb2e-e92e-4520-a7f3-fa3bc47a2819" />
+  <img width="484" height="937" alt="Screenshot 2026-02-28 at 14 02 50" src="https://github.com/user-attachments/assets/ceeb65c2-2d66-41d4-b3be-25cfe1577eea" />
 </p> 
 
-### 🥗 Track & Log Your Meals
+### 🥗 Track & Log Your Meals (Light & Dark Mode)
 <p align="center"> 
   <img width="484" height="937" alt="Screenshot 2026-02-27 at 20 47 47" src="https://github.com/user-attachments/assets/e67f998c-3881-41ce-8762-f656acf72282" />
   <img width="484" height="937" alt="Screenshot 2026-02-27 at 20 54 44" src="https://github.com/user-attachments/assets/e0c09fd2-9150-4275-8f2a-82ce02471eba" />
+  <img width="484" height="937" alt="Screenshot 2026-02-28 at 14 04 43" src="https://github.com/user-attachments/assets/784d75b4-ba87-4a3a-b663-782347fa6c1a" />
+  <img width="484" height="937" alt="Screenshot 2026-02-28 at 14 04 59" src="https://github.com/user-attachments/assets/140a0975-d4fc-49bc-b947-30ee63de701c" />
 </p>
 
 
@@ -52,6 +56,7 @@ Users can authenticate via Firebase, add food items, automatically estimate prot
 - 💾 Local persistence powered by SwiftData
 - ⌚ Apple Watch companion app
 - 🔄 Real-time sync between Watch and iPhone
+- 🌗 Full Light & Dark Mode support
 
 --- 
 
