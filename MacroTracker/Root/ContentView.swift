@@ -2,7 +2,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        if AuthService.shared.currentUser != nil {
+        if FirebaseAuthClient.shared.currentUser != nil {
             MacroView()
         } else {
             SignInView()

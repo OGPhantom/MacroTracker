@@ -62,7 +62,7 @@ private extension ContentView {
             defer { isLoading = false }
 
             do {
-                let result = try await OpenAIService.shared.sendPrompt(message: message)
+                let result = try await OpenAIAPIClient.shared.sendPrompt(message: message)
                 sendMacroToiOS(result, date: selectedDate)
                 food = ""
             } catch {

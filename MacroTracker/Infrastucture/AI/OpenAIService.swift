@@ -9,11 +9,11 @@ enum OpenAIError: Error {
 // MARK: - OpenAI Service
 
 // Handles network communication with OpenAI API
-final class OpenAIService {
+final class OpenAIAPIClient {
 
     // MARK: - Shared Instance
 
-    static let shared = OpenAIService()
+    static let shared = OpenAIAPIClient()
 
     // MARK: - API Key
 
@@ -36,7 +36,7 @@ final class OpenAIService {
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.addValue("Bearer \(OpenAIService.apiKey)", forHTTPHeaderField: "Authorization")
+        request.addValue("Bearer \(OpenAIAPIClient.apiKey)", forHTTPHeaderField: "Authorization")
 
         let schema: [String: Any] = [
             "type": "object",

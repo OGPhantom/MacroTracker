@@ -52,7 +52,7 @@ private extension AddMacroView {
     private func submit() {
         Task {
             do {
-                let result = try await OpenAIService.shared.sendPrompt(message: food)
+                let result = try await OpenAIAPIClient.shared.sendPrompt(message: food)
                 await MainActor.run {
                     saveMacro(result)
                     dismiss()

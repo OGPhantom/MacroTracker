@@ -1,15 +1,15 @@
 import Foundation
 import FirebaseAuth
 
-// MARK: - Authentication Service
+// MARK: - FirebaseAuthClient
 
 // Handles Firebase authentication and user session state
 @Observable
-final class AuthService {
+final class FirebaseAuthClient {
 
     // MARK: - Shared Instance
 
-    static let shared = AuthService()
+    static let shared = FirebaseAuthClient()
 
     // MARK: - Current User
 

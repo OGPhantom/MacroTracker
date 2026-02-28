@@ -38,10 +38,10 @@ struct MacroView: View {
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     Button {
-                        try? AuthService.shared.signOut()
+                        try? FirebaseAuthClient.shared.signOut()
                     } label: {
                         Image(systemName: "arrow.backward")
-                            .foregroundColor(.black)
+                            .foregroundColor(.primary)
                     }
                 }
 
@@ -50,7 +50,7 @@ struct MacroView: View {
                         showAddMacro = true
                     } label: {
                         Image(systemName: "plus")
-                            .foregroundColor(.black)
+                            .foregroundColor(.primary)
                     }
                 }
             }

@@ -3,18 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 70;
+	objectVersion = 71;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		322E86292AE82E1700B388D8 /* WatchMacroTracker Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 322E861C2AE82E1500B388D8 /* WatchMacroTracker Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		322E863B2AE879D300B388D8 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 322E86392AE8367E00B388D8 /* WatchConnectivity.framework */; };
-		322E86A82AEDA78F00B388D8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 322E86A72AEDA78E00B388D8 /* GoogleService-Info.plist */; };
 		322E86AB2AEDA7EA00B388D8 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 322E86AA2AEDA7EA00B388D8 /* FirebaseAuth */; };
-		32E215122AB5D81A00E248D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32E215112AB5D81A00E248D4 /* Assets.xcassets */; };
-		B90E7C992F5067D300A3A255 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B90E7C912F5067D300A3A255 /* Assets.xcassets */; };
-		B90E7C9E2F50D4B700A3A255 /* WatchSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90E7C9D2F50D4B700A3A255 /* WatchSessionManager.swift */; };
-		B9E369F72F51CD2500BD4092 /* Secrets.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = B9E369F62F51CD2500BD4092 /* Secrets.xcconfig */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,13 +39,7 @@
 /* Begin PBXFileReference section */
 		322E861C2AE82E1500B388D8 /* WatchMacroTracker Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WatchMacroTracker Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		322E86392AE8367E00B388D8 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
-		322E86A72AEDA78E00B388D8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		32E215082AB5D81900E248D4 /* MacroTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacroTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		32E215112AB5D81A00E248D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B90E7C912F5067D300A3A255 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B90E7C9C2F50D47F00A3A255 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B90E7C9D2F50D4B700A3A255 /* WatchSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchSessionManager.swift; sourceTree = "<group>"; };
-		B97F165B2F50E56900D20899 /* WatchMacroTracker-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WatchMacroTracker-Watch-App-Info.plist"; sourceTree = "<group>"; };
 		B9E369F62F51CD2500BD4092 /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,7 +51,27 @@
 				Macro/Models/Macro.swift,
 				Macro/Models/MacroResult.swift,
 				Macro/Models/OpenAIResponse.swift,
-				Macro/Services/OpenAIService.swift,
+			);
+			target = 322E861B2AE82E1500B388D8 /* WatchMacroTracker Watch App */;
+		};
+		B941D04C2F52FBD8005F58FA /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 32E215072AB5D81900E248D4 /* MacroTracker */;
+		};
+		B941D04F2F52FC78005F58FA /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				AI/OpenAIService.swift,
+			);
+			target = 322E861B2AE82E1500B388D8 /* WatchMacroTracker Watch App */;
+		};
+		B941D0512F52FC96005F58FA /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"WatchMacroTracker-Watch-App-Info.plist",
 			);
 			target = 322E861B2AE82E1500B388D8 /* WatchMacroTracker Watch App */;
 		};
@@ -71,6 +80,10 @@
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		B9152A302F51C9EA004F84A1 /* Shared */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Shared; sourceTree = "<group>"; };
 		B9152A352F51CA46004F84A1 /* Features */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (B9152A592F51CAD5004F84A1 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Features; sourceTree = "<group>"; };
+		B941D04A2F52FBB8005F58FA /* Infrastucture */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (B941D04F2F52FC78005F58FA /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Infrastucture; sourceTree = "<group>"; };
+		B941D04B2F52FBCB005F58FA /* Resources */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (B941D04C2F52FBD8005F58FA /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Resources; sourceTree = "<group>"; };
+		B941D0502F52FC89005F58FA /* Resources */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (B941D0512F52FC96005F58FA /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Resources; sourceTree = "<group>"; };
+		B941D0522F52FCB4005F58FA /* Persistence */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Persistence; sourceTree = "<group>"; };
 		B99248892F50ED2200FE45EA /* App */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = App; sourceTree = "<group>"; };
 		B992488A2F50ED3000FE45EA /* Root */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Root; sourceTree = "<group>"; };
 		B99248A22F50F97100FE45EA /* Root */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Root; sourceTree = "<group>"; };
@@ -127,14 +140,12 @@
 		32E2150A2AB5D81900E248D4 /* MacroTracker */ = {
 			isa = PBXGroup;
 			children = (
+				B941D04B2F52FBCB005F58FA /* Resources */,
+				B941D04A2F52FBB8005F58FA /* Infrastucture */,
 				B9152A352F51CA46004F84A1 /* Features */,
 				B9152A302F51C9EA004F84A1 /* Shared */,
 				B992488A2F50ED3000FE45EA /* Root */,
 				B99248892F50ED2200FE45EA /* App */,
-				322E86A72AEDA78E00B388D8 /* GoogleService-Info.plist */,
-				32E215112AB5D81A00E248D4 /* Assets.xcassets */,
-				B90E7C9C2F50D47F00A3A255 /* Info.plist */,
-				B9E369F62F51CD2500BD4092 /* Secrets.xcconfig */,
 			);
 			path = MacroTracker;
 			sourceTree = "<group>";
@@ -142,21 +153,20 @@
 		B90E7C952F5067D300A3A255 /* WatchMacroTracker */ = {
 			isa = PBXGroup;
 			children = (
-				B99248A42F50F98800FE45EA /* Service */,
+				B941D0502F52FC89005F58FA /* Resources */,
+				B99248A42F50F98800FE45EA /* Infrastucture */,
 				B99248A32F50F97A00FE45EA /* App */,
 				B99248A22F50F97100FE45EA /* Root */,
-				B90E7C912F5067D300A3A255 /* Assets.xcassets */,
-				B97F165B2F50E56900D20899 /* WatchMacroTracker-Watch-App-Info.plist */,
 			);
 			path = WatchMacroTracker;
 			sourceTree = "<group>";
 		};
-		B99248A42F50F98800FE45EA /* Service */ = {
+		B99248A42F50F98800FE45EA /* Infrastucture */ = {
 			isa = PBXGroup;
 			children = (
-				B90E7C9D2F50D4B700A3A255 /* WatchSessionManager.swift */,
+				B941D0522F52FCB4005F58FA /* Persistence */,
 			);
-			path = Service;
+			path = Infrastucture;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,6 +185,8 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				B941D0502F52FC89005F58FA /* Resources */,
+				B941D0522F52FCB4005F58FA /* Persistence */,
 				B99248A22F50F97100FE45EA /* Root */,
 				B99248A32F50F97A00FE45EA /* App */,
 			);
@@ -200,6 +212,8 @@
 			fileSystemSynchronizedGroups = (
 				B9152A302F51C9EA004F84A1 /* Shared */,
 				B9152A352F51CA46004F84A1 /* Features */,
+				B941D04A2F52FBB8005F58FA /* Infrastucture */,
+				B941D04B2F52FBCB005F58FA /* Resources */,
 				B99248892F50ED2200FE45EA /* App */,
 				B992488A2F50ED3000FE45EA /* Root */,
 			);
@@ -256,7 +270,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B90E7C992F5067D300A3A255 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,9 +277,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				322E86A82AEDA78F00B388D8 /* GoogleService-Info.plist in Resources */,
-				32E215122AB5D81A00E248D4 /* Assets.xcassets in Resources */,
-				B9E369F72F51CD2500BD4092 /* Secrets.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,7 +287,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B90E7C9E2F50D4B700A3A255 /* WatchSessionManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,7 +319,7 @@
 				DEVELOPMENT_TEAM = 39KX3J57QQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "WatchMacroTracker/WatchMacroTracker-Watch-App-Info.plist";
+				INFOPLIST_FILE = "WatchMacroTracker/Resources/WatchMacroTracker-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = WatchMacroTracker;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.ogphantom.MacroTracker;
@@ -341,7 +350,7 @@
 				DEVELOPMENT_TEAM = 39KX3J57QQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "WatchMacroTracker/WatchMacroTracker-Watch-App-Info.plist";
+				INFOPLIST_FILE = "WatchMacroTracker/Resources/WatchMacroTracker-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = WatchMacroTracker;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.ogphantom.MacroTracker;
@@ -363,7 +372,8 @@
 		};
 		32E215162AB5D81A00E248D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B9E369F62F51CD2500BD4092 /* Secrets.xcconfig */;
+			baseConfigurationReferenceAnchor = B941D04B2F52FBCB005F58FA /* Resources */;
+			baseConfigurationReferenceRelativePath = Secrets.xcconfig;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -497,7 +507,7 @@
 				DEVELOPMENT_TEAM = 39KX3J57QQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MacroTracker/Info.plist;
+				INFOPLIST_FILE = MacroTracker/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -528,7 +538,7 @@
 				DEVELOPMENT_TEAM = 39KX3J57QQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MacroTracker/Info.plist;
+				INFOPLIST_FILE = MacroTracker/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

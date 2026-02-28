@@ -30,7 +30,7 @@ struct MacroStatCard: View {
         .padding()
         .background(
             RoundedRectangle(cornerRadius: 10)
-                .fill(.gray.opacity(0.1))
+                .fill(Color(.secondarySystemBackground))
         )
         .frame(maxWidth: .infinity)
     }

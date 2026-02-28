@@ -1,13 +1,7 @@
 import SwiftUI
 
 struct SignInView: View {
-
-    @State private var email = ""
-    @State private var password = ""
-    @State private var showRegister = false
-    @State private var showErrorAlert = false
-    @State private var errorMessage = ""
-
+    @State private var viewModel = SignInViewModel()
     var body: some View {
         VStack(spacing: 20) {
 
@@ -17,58 +11,40 @@ struct SignInView: View {
 
             FormTextField(
                 title: "Email Address",
-                text: $email,
+                text: $viewModel.email,
                 keyboardType: .emailAddress,
                 contentType: .emailAddress
             )
 
             FormTextField(
                 title: "Password",
-                text: $password,
+                text: $viewModel.password,
                 contentType: .password,
                 isSecure: true
             )
 
             PrimaryButton(title: "Log In") {
-                signIn()
+                Task {
+                    _ = await viewModel.signIn()
+                }
             }
-            .disabled(!isFormValid)
+            .disabled(!viewModel.isFormValid)
 
             Button("New User? Register") {
-                showRegister = true
+                viewModel.showRegister = true
             }
             .foregroundStyle(.primary)
         }
         .padding()
         .frame(maxHeight: .infinity, alignment: .top)
-        .sheet(isPresented: $showRegister) {
+        .sheet(isPresented: $viewModel.showRegister) {
             RegisterView()
                 .presentationDetents([.fraction(0.5)])
         }
-        .alert("Error", isPresented: $showErrorAlert) {
+        .alert("Error", isPresented: $viewModel.showErrorAlert) {
             Button("OK", role: .cancel) { }
         } message: {
-            Text(errorMessage)
-        }
-    }
-}
-
-
-private extension SignInView {
-    private var isFormValid: Bool {
-        !email.isEmpty && !password.isEmpty
-    }
-
-    private func signIn() {
-        Task {
-            do {
-                try await AuthService.shared.signInWithEmail(email: email, password: password)
-            } catch {
-                await MainActor.run {
-                    errorMessage = "Invalid email or password"
-                    showErrorAlert = true
-                }
-            }
+            Text(viewModel.errorMessage)
         }
     }
 }
