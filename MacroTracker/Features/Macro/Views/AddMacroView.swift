@@ -4,10 +4,7 @@ struct AddMacroView: View {
     @Environment(\.modelContext) private var modelContext
     @Environment(\.dismiss) private var dismiss
 
-    @State private var food = ""
-    @State private var date = Date()
-    @State private var showAlert = false
-    @State private var errorMessage = ""
+    @State private var viewModel = AddMacroViewModel()
 
     var body: some View {
         ZStack(alignment: .topTrailing) {
@@ -15,22 +12,28 @@ struct AddMacroView: View {
 
                 FormTextField(
                     title: "What did you eat?",
-                    text: $food
+                    text: $viewModel.food
                 )
 
-                DatePicker("Date", selection: $date)
+                DatePicker("Date", selection: $viewModel.date)
 
                 PrimaryButton(title: "Done") {
-                    submit()
+                    Task {
+                        let result = await viewModel.submit()
+                        if let result {
+                            saveMacro(result)
+                            dismiss()
+                        }
+                    }
                 }
-                .disabled(!isFormValid)
+                .disabled(!viewModel.isFormValid)
             }
             .padding(.top, 24)
             .padding(.horizontal)
-            .alert("Oops", isPresented: $showAlert) {
+            .alert("Oops", isPresented: $viewModel.showAlert) {
                 Button("OK", role: .cancel) { }
             } message: {
-                Text(errorMessage)
+                Text(viewModel.errorMessage)
             }
 
             Button {
@@ -42,35 +45,12 @@ struct AddMacroView: View {
             .foregroundStyle(.primary)
         }
     }
-}
-
-private extension AddMacroView {
-    private var isFormValid: Bool {
-        food.trimmingCharacters(in: .whitespacesAndNewlines).count > 2
-    }
-
-    private func submit() {
-        Task {
-            do {
-                let result = try await OpenAIAPIClient.shared.sendPrompt(message: food)
-                await MainActor.run {
-                    saveMacro(result)
-                    dismiss()
-                }
-            } catch {
-                await MainActor.run {
-                    errorMessage = "Failed to get valid response from AI."
-                    showAlert = true
-                }
-            }
-        }
-    }
 
     private func saveMacro(_ result: MacroResult) {
         let macro = Macro(
             food: result.food,
             createdAt: .now,
-            date: date,
+            date: viewModel.date,
             carbs: result.carbs,
             fats: result.fats,
             protein: result.protein

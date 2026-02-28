@@ -50,7 +50,6 @@
 				Macro/Models/DailyMacro.swift,
 				Macro/Models/Macro.swift,
 				Macro/Models/MacroResult.swift,
-				Macro/Models/OpenAIResponse.swift,
 			);
 			target = 322E861B2AE82E1500B388D8 /* WatchMacroTracker Watch App */;
 		};
@@ -64,7 +63,8 @@
 		B941D04F2F52FC78005F58FA /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				AI/OpenAIService.swift,
+				AI/OpenAIAPIClient.swift,
+				AI/OpenAIResponse.swift,
 			);
 			target = 322E861B2AE82E1500B388D8 /* WatchMacroTracker Watch App */;
 		};
