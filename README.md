@@ -1,6 +1,8 @@
 # 🍎 MacroTracker 
 An **AI-powered macronutrient tracker for iOS and watchOS** built with **SwiftUI**, **SwiftData**, **Firebase**, **WatchConnectivity** and **OpenAI API**. 
-Track your **daily macros** by simply entering a food name, let **AI** calculate the rest, and sync seamlessly with **Apple Watch**. 
+Track your **daily macros** by simply entering a food name, let **AI** calculate the rest, and sync seamlessly with **Apple Watch**.
+
+> 🎓 **Research project (2024).** This app is the practical part of my research on helping people correct their diet by tracking the nutrients they eat, with a mobile app and a companion app for the smartwatch.
 
 --- 
 
